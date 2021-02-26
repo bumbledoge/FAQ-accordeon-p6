@@ -33,7 +33,7 @@ Background gradient:
 #### Dividers
 
 - Light grayish blue: hsl(240, 5%, 91%)
-
+ 
 ## Typography
 
 ### Body Copy
