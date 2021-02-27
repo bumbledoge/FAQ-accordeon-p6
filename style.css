@@ -97,12 +97,16 @@ h1, p {
     top: 20px;
     left: -100px;
 }
-
+/* style="opacity: 0;" */
 
 .answer {
     position: absolute;
+    max-width: 280px;
+    margin-top: 5px;
 }
-
+#a1 {
+    width: 300px;
+}
 
 
 
