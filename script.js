@@ -1,18 +1,22 @@
 let question1 = document.getElementById("aq1");
 let answer1 = document.getElementsByClassName("a1")[0];
+let active1 = 0;
 
 let question2 = document.getElementById("aq2");
 let answer2 = document.getElementsByClassName("a2")[0];
+let active2 = 0;
 
 let question3 = document.getElementById("aq3");
 let answer3 = document.getElementsByClassName("a3")[0];
+let active3 = 0;
 
 let question4 = document.getElementById("aq4");
 let answer4 = document.getElementsByClassName("a4")[0];
+let active4 = 0;
 
 let question5 = document.getElementById("aq5");
 let answer5 = document.getElementsByClassName("a5")[0];
-
+let active5 = 0;
 
 
 let lastQ = question1;
@@ -24,32 +28,72 @@ let lastClass = '1';
 question1.addEventListener('click', ()=> {
     resetLast();
     updateLast(1);
-    updateCurrent(1);
+
+    if(active1 === 1) {
+        resetLast();
+        active1 = 0;
+    }
+    else{
+        updateCurrent(1);
+        active1 = 1;
+    }
 })
 question2.addEventListener('click', ()=> {
     resetLast();
     updateLast(2);
-    updateCurrent(2);
+    if(active2 === 1) {
+        resetLast();
+        active2 = 0;
+    }
+    else{
+        updateCurrent(2);
+        active2 = 1;
+    }
 })
 question3.addEventListener('click', ()=> {
     resetLast();
     updateLast(3);
-    updateCurrent(3);
+
+    if(active3 === 1) {
+        resetLast();
+        active3 = 0;
+    }
+    else{
+        updateCurrent(3);
+        active3 = 1;
+    }
 })
 question4.addEventListener('click', ()=> {
     resetLast();
     updateLast(4);
-    updateCurrent(4);
+
+    if(active4 === 1) {
+        resetLast();
+        active4 = 0;
+    }
+    else{
+        updateCurrent(4);
+        active4 = 1;
+    }
 })
 question5.addEventListener('click', ()=> {
+
     resetLast();
     updateLast(5);
-    updateCurrent(5);
+
+    if(active5 === 1) {
+        resetLast();
+        active5 = 0;
+    }
+    else{
+        updateCurrent(5);
+        active5 = 1;
+    }
 })
 
 
 
-function resetLast () {
+function resetLast (nr) {
     lastA.style.opacity = 0;
     lastQ.style.height = 13 + 'px';
     document.getElementsByClassName('qst' + lastClass)[0].style.fontWeight = 400;

@@ -36,6 +36,8 @@ h1, p {
     border-radius: 16px;
 
     overflow: hidden;
+
+    box-shadow: 0px 0px 20px rgb(88, 88, 88);
 }
 .pictures {
     flex: 1;
@@ -78,6 +80,9 @@ h1, p {
     padding: 5px 0px;
 
     border-bottom: 1px solid rgb(184, 184, 184);
+}
+.aq:hover {
+    cursor: pointer;
 }
 
 #cube {
